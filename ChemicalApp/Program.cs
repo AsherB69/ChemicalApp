@@ -12,12 +12,6 @@ namespace ChemicalApp
         static void OneChemical()
         {
 
-            //Randomly generate a number for the live germs present
-            Random rndNumber = new Random();
-            int b4GermCount = rndNumber.Next(1000, 10000);
-
-            Console.WriteLine($"there are currently {b4GermCount} germs in the dish");
-
             //Chemical user is testing is added
             Console.WriteLine("choose which chemical you would like to test/n 1. cyanide/n 2. chlorine /n 3. propane");
             string userchoice = Console.ReadLine();
@@ -37,24 +31,43 @@ namespace ChemicalApp
                 Console.WriteLine("you have chosen propane");
             }
 
-
-
-
-            //Wait some time
-            static void Main()
-            {
-                //will sleep for 5 sec
-                Thread.Sleep(5000); 
-            }
-
-
-            //Determine the efficiency rating of the chemical killed the germs by subtracting the two amounts and dividing by the time.
-
+            float sumEfficency = 0;
 
             //Loop 5 times
 
-            //display final efficiency rating, this will be an average of the 5 tests
+            for (int i = 0; i < 5; i++)
+            {
+                //Randomly generate a number for the live germs present
+                Random rndNumber = new Random();
+                int b4GermCount = rndNumber.Next(1000, 10000);
 
+                Console.WriteLine($"there are {b4GermCount} germs");
+
+                Console.WriteLine($"adding {userchoice}");
+
+
+
+                //Wait some time\
+
+                Console.WriteLine("wait 5 seconds");
+
+                //will sleep for 5 sec
+                Thread.Sleep(5000);
+
+
+                int afterGermCount = rndNumber.Next(0, b4GermCount);
+
+
+                //Determine the efficiency rating of the chemical killed the germs by subtracting the two amounts and dividing by the time.
+                float efficency = (float)(b4GermCount - afterGermCount) / 2;
+
+                sumEfficency += efficency;
+            }
+            float finalEfficency = sumEfficency / 5;
+
+
+            //display final efficiency rating, this will be an average of the 5 tests
+            Console.WriteLine($"the average of all your tests is {finalEfficency}");
         }
 
 

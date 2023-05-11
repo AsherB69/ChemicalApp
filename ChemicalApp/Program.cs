@@ -11,6 +11,13 @@ namespace ChemicalApp
         //methods or functions
         static void OneChemical()
         {
+            //display screen
+            Console.WriteLine(@"        __                   _            _____" + "\n" +
+                                 @"  _____/ /_  ___  ____ ___  (_)________ _/ /   |  ____  ____" + "\n" +
+                                 @" / ___/ __ \/ _ \/ __ `__ \/ / ___/ __ `/ / /| | / __ \/ __ \" + "\n" +
+                                 @"/ /__/ / / /  __/ / / / / / / /__/ /_/ / / ___ |/ /_/ / /_/ /" + "\n" +
+                                 @"\___/_/ /_/\___/_/ /_/ /_/_/\___/\__,_/_/_/  |_/ .___/ .___/" + "\n" +
+                                 @"                                              /_/   /_/" + "\n");
 
             //Chemical user is testing is added
             Console.WriteLine("choose which chemical you would like to test/n 1. cyanide/n 2. chlorine /n 3. propane");

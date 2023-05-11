@@ -31,6 +31,14 @@ namespace ChemicalApp
                 Console.WriteLine("you have chosen propane");
             }
 
+            else 
+            {
+                Console.WriteLine("please choose a chemical listed above");
+                OneChemical();
+            }
+
+
+
             float sumEfficency = 0;
 
             //Loop 5 times
@@ -47,7 +55,7 @@ namespace ChemicalApp
 
 
 
-                //Wait some time\
+                //Wait some time
 
                 Console.WriteLine("wait 5 seconds");
 
@@ -67,7 +75,7 @@ namespace ChemicalApp
 
 
             //display final efficiency rating, this will be an average of the 5 tests
-            Console.WriteLine($"the average of all your tests is {finalEfficency}");
+            Console.WriteLine($"the final efficency for {userchoice} is {finalEfficency}");
         }
 
 
